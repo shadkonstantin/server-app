@@ -1,0 +1,81 @@
+{
+  "cpu": {
+    "usage": 2.3,
+    "top_processes": [
+      {
+        "pid": "85673",
+        "name": "python3",
+        "cpu": "14.2"
+      },
+      {
+        "pid": "85671",
+        "name": "bash",
+        "cpu": "12.1"
+      },
+      {
+        "pid": "81308",
+        "name": "hermes",
+        "cpu": "4.5"
+      },
+      {
+        "pid": "63960",
+        "name": "fail2ban-server",
+        "cpu": "0.2"
+      },
+      {
+        "pid": "82825",
+        "name": "node",
+        "cpu": "0.0"
+      }
+    ]
+  },
+  "ram": {
+    "used_mb": 918,
+    "total_mb": 1967,
+    "usage_pct": 46.7
+  },
+  "disk": {
+    "used_gb": 9,
+    "total_gb": 15,
+    "usage_pct": 64
+  },
+  "uptime": "4 days, 4 hours, 35 minutes",
+  "security": {
+    "ufw": {
+      "active": false,
+      "status": "unknown"
+    },
+    "fail2ban": {
+      "total_banned": 0,
+      "jails": {},
+      "installed": false
+    },
+    "open_ports": [
+      {
+        "port": "2222",
+        "address": "0.0.0.0:2222",
+        "program": "0.0.0.0:*"
+      },
+      {
+        "port": "631",
+        "address": "[::1]:631",
+        "program": "[::]:*"
+      },
+      {
+        "port": "2222",
+        "address": "[::]:2222",
+        "program": "[::]:*"
+      },
+      {
+        "port": "5052",
+        "address": "127.0.0.1:5052",
+        "program": "users:((\"python3\",pid=82126,fd=4))"
+      },
+      {
+        "port": "631",
+        "address": "127.0.0.1:631",
+        "program": "0.0.0.0:*"
+      }
+    ]
+  }
+}
