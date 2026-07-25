@@ -1,16 +1,11 @@
 {
   "cpu": {
-    "usage": 2.3,
+    "usage": 4.4,
     "top_processes": [
       {
-        "pid": "85673",
+        "pid": "85995",
         "name": "python3",
         "cpu": "14.2"
-      },
-      {
-        "pid": "85671",
-        "name": "bash",
-        "cpu": "12.1"
       },
       {
         "pid": "81308",
@@ -26,11 +21,16 @@
         "pid": "82825",
         "name": "node",
         "cpu": "0.0"
+      },
+      {
+        "pid": "82126",
+        "name": "python3",
+        "cpu": "0.0"
       }
     ]
   },
   "ram": {
-    "used_mb": 918,
+    "used_mb": 919,
     "total_mb": 1967,
     "usage_pct": 46.7
   },
@@ -39,7 +39,7 @@
     "total_gb": 15,
     "usage_pct": 64
   },
-  "uptime": "4 days, 4 hours, 35 minutes",
+  "uptime": "4 days, 4 hours, 37 minutes",
   "security": {
     "ufw": {
       "active": false,
