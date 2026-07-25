@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-07-25T15:55:01Z",
+  "timestamp": "2026-07-25T16:00:02Z",
   "cpu": {
-    "usage": 2.3,
+    "usage": 4.2,
     "top_processes": [
       {
-        "pid": "89221",
+        "pid": "89915",
         "name": "ps",
         "cpu": "100"
       },
       {
-        "pid": "89214",
+        "pid": "89905",
         "name": "python3",
-        "cpu": "20.0"
+        "cpu": "18.7"
       },
       {
         "pid": "81308",
@@ -19,39 +19,39 @@
         "cpu": "3.2"
       },
       {
+        "pid": "89903",
+        "name": "server_update.s",
+        "cpu": "2.9"
+      },
+      {
         "pid": "63960",
         "name": "fail2ban-server",
         "cpu": "0.2"
-      },
-      {
-        "pid": "82825",
-        "name": "node",
-        "cpu": "0.0"
       }
     ]
   },
   "ram": {
-    "used_mb": 924,
+    "used_mb": 906,
     "total_mb": 1967,
-    "usage_pct": 47.0
+    "usage_pct": 46.1
   },
   "disk": {
     "used_gb": 9,
     "total_gb": 15,
     "usage_pct": 64
   },
-  "uptime": "4 days, 6 hours, 11 minutes",
+  "uptime": "4 days, 6 hours, 16 minutes",
   "loadavg": {
-    "load_1": 0.0,
-    "load_5": 0.02,
-    "load_15": 0.0
+    "load_1": 0.07,
+    "load_5": 0.06,
+    "load_15": 0.01
   },
   "network": {
     "iface": "eth0",
-    "rx_bytes": 3805088880,
-    "tx_bytes": 1302559344,
-    "rx_speed": 4672,
-    "tx_speed": 19739
+    "rx_bytes": 3806954584,
+    "tx_bytes": 1323893661,
+    "rx_speed": 6200,
+    "tx_speed": 70893
   },
   "temperature": {
     "available": false,
@@ -59,7 +59,7 @@
     "details": "no sensors"
   },
   "services": {
-    "total": 28,
+    "total": 27,
     "top": [
       {
         "name": "accounts-daemon",
@@ -67,7 +67,7 @@
       },
       {
         "name": "avahi-daemon",
-        "memory_mb": 4.0
+        "memory_mb": 4.1
       },
       {
         "name": "colord",
@@ -78,8 +78,8 @@
         "memory_mb": 2.8
       },
       {
-        "name": "cups-browsed",
-        "memory_mb": 15.6
+        "name": "dbus",
+        "memory_mb": 2.6
       }
     ]
   },
@@ -120,22 +120,12 @@
       {
         "port": "2222",
         "address": "0.0.0.0:2222",
-        "program": "users:((\"sshd\",pid=61280,fd=3),(\"systemd\",pid=1,fd=287))"
-      },
-      {
-        "port": "631",
-        "address": "[::1]:631",
-        "program": "users:((\"cupsd\",pid=78463,fd=6))"
+        "program": "users:((\"sshd\",pid=61280,fd=3),(\"systemd\",pid=1,fd=222))"
       },
       {
         "port": "2222",
         "address": "[::]:2222",
-        "program": "users:((\"sshd\",pid=61280,fd=4),(\"systemd\",pid=1,fd=291))"
-      },
-      {
-        "port": "631",
-        "address": "127.0.0.1:631",
-        "program": "users:((\"cupsd\",pid=78463,fd=7))"
+        "program": "users:((\"sshd\",pid=61280,fd=4),(\"systemd\",pid=1,fd=223))"
       }
     ],
     "pending_security_updates": 0
@@ -200,6 +190,11 @@
       "ts": "2026-07-25T15:55:01Z",
       "cpu": 2.3,
       "ram": 47.0
+    },
+    {
+      "ts": "2026-07-25T16:00:02Z",
+      "cpu": 4.2,
+      "ram": 46.1
     }
   ]
 }
