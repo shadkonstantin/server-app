@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>🖥️ Server Dashboard</title>
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --surface: #13131f;
+      --card: #1a1a2e;
+      --card-hover: #1f1f37;
+      --border: rgba(255,255,255,0.06);
+      --border-strong: rgba(255,255,255,0.10);
+      --text: #f1f5f9;
+      --text-dim: #cbd5e1;
+      --muted: #64748b;
+      --muted-light: #94a3b8;
+      --green: #10b981;
+      --green-bg: rgba(16,185,129,0.10);
+      --orange: #f59e0b;
+      --orange-bg: rgba(245,158,11,0.10);
+      --blue: #3b82f6;
+      --blue-bg: rgba(59,130,246,0.10);
+      --violet: #8b5cf6;
+      --violet-bg: rgba(139,92,246,0.10);
+      --red: #ef4444;
+      --red-bg: rgba(239,68,68,0.10);
+      --radius: 14px;
+      --radius-sm: 10px;
+      --radius-xs: 8px;
+      --shadow: 0 2px 8px rgba(0,0,0,0.3), 0 0 0 1px var(--border);
+      --shadow-lg: 0 4px 16px rgba(0,0,0,0.4), 0 0 0 1px var(--border-strong);
+      --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { -webkit-tap-highlight-color: transparent; }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      min-height: 100dvh;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 12px 12px 24px;
+    }
+
+    /* ── Header ─────────────────────── */
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 18px;
+      background: linear-gradient(135deg, var(--card) 0%, #1e1e3a 100%);
+      border-radius: var(--radius);
+      margin-bottom: 12px;
+      box-shadow: var(--shadow);
+    }
+    .header-icon {
+      width: 48px; height: 48px;
+      background: var(--blue-bg);
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px;
+      flex-shrink: 0;
+    }
+    .header-info h1 {
+      font-size: 18px; font-weight: 700; letter-spacing: -0.3px;
+      line-height: 1.2;
+    }
+    .header-info .sub {
+      font-size: 12px; color: var(--muted); margin-top: 2px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .header-info .sub .dot {
+      width: 5px; height: 5px;
+      border-radius: 50%; display: inline-block;
+    }
+    .dot.green { background: var(--green); }
+    .dot.red { background: var(--red); }
+    .updated-badge {
+      font-size: 10px; color: var(--muted);
+      background: rgba(255,255,255,0.04);
+      padding: 3px 10px; border-radius: 20px;
+      white-space: nowrap; margin-left: auto;
+    }
+
+    /* ── KPI Cards (5 cols) ─────────── */
+    .kpi {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+    .kpi-card {
+      background: var(--card);
+      border-radius: var(--radius-sm);
+      padding: 12px 8px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      transition: transform 0.15s, box-shadow 0.15s;
+      cursor: default;
+    }
+    .kpi-card:active { transform: scale(0.97); }
+    .kpi-card .kpi-icon {
+      font-size: 16px; margin-bottom: 2px;
+    }
+    .kpi-card .kpi-lbl {
+      font-size: 9px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.4px; color: var(--muted); margin-bottom: 2px;
+    }
+    .kpi-card .kpi-val {
+      font-size: 18px; font-weight: 800; line-height: 1.1;
+      letter-spacing: -0.5px;
+    }
+    .kpi-card.g { border-top: 2px solid var(--green); }
+    .kpi-card.g .kpi-val { color: var(--green); }
+    .kpi-card.o { border-top: 2px solid var(--orange); }
+    .kpi-card.o .kpi-val { color: var(--orange); }
+    .kpi-card.b { border-top: 2px solid var(--blue); }
+    .kpi-card.b .kpi-val { color: var(--blue); }
+    .kpi-card.r { border-top: 2px solid var(--red); }
+    .kpi-card.r .kpi-val { color: var(--red); }
+    .kpi-card.v { border-top: 2px solid var(--violet); }
+    .kpi-card.v .kpi-val { color: var(--violet); }
+
+    /* ── Progress Bars ──────────────── */
+    .gauges {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .gauge {
+      background: var(--card);
+      border-radius: var(--radius-sm);
+      padding: 14px;
+      box-shadow: var(--shadow);
+    }
+    .gauge-label {
+      font-size: 11px; font-weight: 600; color: var(--muted);
+      margin-bottom: 8px; display: flex; justify-content: space-between;
+    }
+    .gauge-val { font-weight: 700; color: var(--text); }
+    .bar-track {
+      height: 8px; background: rgba(255,255,255,0.06);
+      border-radius: 4px; overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%; border-radius: 4px;
+      transition: width 0.6s ease;
+    }
+    .bar-fill.cpu { background: linear-gradient(90deg, var(--blue), #60a5fa); }
+    .bar-fill.ram { background: linear-gradient(90deg, var(--violet), #a78bfa); }
+    .bar-fill.disk { background: linear-gradient(90deg, var(--orange), #fbbf24); }
+    .bar-fill.warn { background: linear-gradient(90deg, var(--orange), #f87171); }
+    .bar-fill.crit { background: linear-gradient(90deg, var(--red), #f87171); }
+    .gauge-detail {
+      font-size: 10px; color: var(--muted-light); margin-top: 5px;
+    }
+
+    /* ── Sections ───────────────────── */
+    .section {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      margin-bottom: 12px;
+      box-shadow: var(--shadow);
+    }
+    .section-title {
+      font-size: 13px; font-weight: 700;
+      color: var(--violet);
+      margin-bottom: 10px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .section-title .count {
+      font-size: 10px; font-weight: 600; color: var(--muted);
+      background: rgba(255,255,255,0.04);
+      padding: 2px 8px; border-radius: 10px;
+      margin-left: auto;
+    }
+
+    /* ── Item rows ──────────────────── */
+    .item-row {
+      display: flex; align-items: center;
+      padding: 8px 8px; margin: 0 -8px;
+      gap: 10px; border-radius: var(--radius-xs);
+      transition: background 0.15s;
+    }
+    .item-row + .item-row { border-top: 1px solid var(--border); }
+    .item-name {
+      flex: 1; font-size: 13px; color: var(--text-dim);
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+    .item-val { font-size: 13px; font-weight: 600; white-space: nowrap; }
+
+    /* ── Security badge ─────────────── */
+    .badge {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 11px; font-weight: 700; padding: 4px 10px;
+      border-radius: 20px;
+    }
+    .badge.ok { background: var(--green-bg); color: var(--green); }
+    .badge.warn { background: var(--orange-bg); color: var(--orange); }
+    .badge.err { background: var(--red-bg); color: var(--red); }
+
+    .sec-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 8px; margin-bottom: 8px;
+    }
+    .sec-item {
+      background: rgba(255,255,255,0.02);
+      border-radius: var(--radius-xs);
+      padding: 10px 12px;
+    }
+    .sec-item .label {
+      font-size: 10px; font-weight: 600; color: var(--muted);
+      text-transform: uppercase; margin-bottom: 4px;
+    }
+    .sec-item .value {
+      font-size: 15px; font-weight: 700;
+    }
+
+    /* ── Port list ──────────────────── */
+    .port-tag {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 11px; font-weight: 600;
+      background: rgba(255,255,255,0.04);
+      color: var(--text-dim);
+      padding: 4px 9px; border-radius: 6px;
+      margin: 2px 4px 2px 0;
+    }
+    .port-tag .port-num { color: var(--blue); font-weight: 700; }
+
+    /* ── Jail badge ─────────────────── */
+    .jail-badge {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 11px; font-weight: 700;
+      background: var(--red-bg); color: var(--red);
+      padding: 3px 9px; border-radius: 12px;
+      margin: 2px 4px 2px 0;
+    }
+
+    /* ── No data / error states ─────── */
+    .empty {
+      text-align: center; padding: 30px;
+      opacity: 0.4; font-size: 14px;
+    }
+    #loading { text-align:center; padding: 40px; }
+    .spinner {
+      display:inline-block; width:30px; height:30px;
+      border:3px solid rgba(255,255,255,0.1); border-top-color: var(--blue);
+      border-radius:50%; animation: spin .8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── Auto-refresh indicator ─────── */
+    .refresh-info {
+      text-align: center; padding: 8px;
+      font-size: 10px; color: var(--muted);
+    }
+
+    /* ── Responsive ─────────────────── */
+    @media (max-width: 480px) {
+      .kpi { grid-template-columns: repeat(3, 1fr); }
+      .gauges { grid-template-columns: 1fr; }
+      .sec-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="header-icon">🖥️</div>
+    <div class="header-info">
+      <h1>Server Dashboard</h1>
+      <div class="sub"><span class="dot green" id="status-dot"></span><span id="hostname">—</span></div>
+    </div>
+    <div class="updated-badge" id="updated">—</div>
+  </div>
+
+  <div id="loading"><div class="spinner"></div></div>
+
+  <div id="content" style="display:none">
+    <!-- KPI Cards -->
+    <div class="kpi">
+      <div class="kpi-card b"><div class="kpi-icon">🔥</div><div class="kpi-lbl">CPU</div><div class="kpi-val" id="cpu-val">—</div></div>
+      <div class="kpi-card v"><div class="kpi-icon">🧠</div><div class="kpi-lbl">RAM</div><div class="kpi-val" id="ram-val">—</div></div>
+      <div class="kpi-card o"><div class="kpi-icon">💾</div><div class="kpi-lbl">Disk</div><div class="kpi-val" id="disk-val">—</div></div>
+      <div class="kpi-card g"><div class="kpi-icon">⏱️</div><div class="kpi-lbl">Uptime</div><div class="kpi-val" id="uptime-val" style="font-size:13px;line-height:1.3">—</div></div>
+      <div class="kpi-card r"><div class="kpi-icon">🚫</div><div class="kpi-lbl">Bans</div><div class="kpi-val" id="bans-val">—</div></div>
+    </div>
+
+    <!-- Progress Bars -->
+    <div class="gauges">
+      <div class="gauge">
+        <div class="gauge-label"><span>CPU Load</span><span class="gauge-val" id="cpu-pct">0%</span></div>
+        <div class="bar-track"><div class="bar-fill cpu" id="cpu-bar" style="width:0%"></div></div>
+        <div class="gauge-detail" id="cpu-detail">—</div>
+      </div>
+      <div class="gauge">
+        <div class="gauge-label"><span>RAM Usage</span><span class="gauge-val" id="ram-pct">0%</span></div>
+        <div class="bar-track"><div class="bar-fill ram" id="ram-bar" style="width:0%"></div></div>
+        <div class="gauge-detail" id="ram-detail">—</div>
+      </div>
+      <div class="gauge">
+        <div class="gauge-label"><span>Disk Usage</span><span class="gauge-val" id="disk-pct">0%</span></div>
+        <div class="bar-track"><div class="bar-fill disk" id="disk-bar" style="width:0%"></div></div>
+        <div class="gauge-detail" id="disk-detail">—</div>
+      </div>
+    </div>
+
+    <!-- Security Section -->
+    <div class="section" id="sec-section">
+      <div class="section-title">🔒 Security</div>
+      <div class="sec-grid">
+        <div class="sec-item">
+          <div class="label">Firewall (UFW)</div>
+          <div class="value" id="ufw-status">—</div>
+        </div>
+        <div class="sec-item">
+          <div class="label">fail2ban Banned</div>
+          <div class="value" id="f2b-total">—</div>
+        </div>
+      </div>
+      <div id="f2b-jails" style="margin-top:4px"></div>
+      <div style="margin-top:10px">
+        <div class="section-title" style="font-size:11px; margin-bottom:6px">📡 Open Ports</div>
+        <div id="ports-list">—</div>
+      </div>
+    </div>
+
+    <!-- Top Processes -->
+    <div class="section">
+      <div class="section-title">📊 Top Processes by CPU</div>
+      <div id="procs-list"></div>
+    </div>
+
+    <div class="refresh-info">🔄 Auto-refresh every 5 min · Last update: <span id="last-update">—</span></div>
+  </div>
+</div>
+
+<script>
+function barClass(pct) {
+  if (pct >= 90) return 'crit';
+  if (pct >= 75) return 'warn';
+  return '';
+}
+
+function render(data) {
+  // Hide loading, show content
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('content').style.display = 'block';
+
+  const cpu = data.cpu || {};
+  const ram = data.ram || {};
+  const disk = data.disk || {};
+  const sec = data.security || {};
+  const ufw = sec.ufw || {};
+  const f2b = sec.fail2ban || {};
+
+  // Set hostname (derived from document location or generic)
+  document.getElementById('hostname').textContent = window.location.hostname || 'server';
+
+  // KPI cards
+  document.getElementById('cpu-val').textContent = cpu.usage != null ? cpu.usage + '%' : '—';
+  document.getElementById('ram-val').textContent = ram.usage_pct != null ? ram.usage_pct + '%' : '—';
+  document.getElementById('disk-val').textContent = disk.usage_pct != null ? disk.usage_pct + '%' : '—';
+  document.getElementById('uptime-val').textContent = data.uptime || '—';
+  document.getElementById('bans-val').textContent = f2b.total_banned || 0;
+
+  // CPU bar
+  const cpuPct = cpu.usage || 0;
+  document.getElementById('cpu-pct').textContent = cpuPct + '%';
+  document.getElementById('cpu-bar').style.width = Math.min(cpuPct, 100) + '%';
+  document.getElementById('cpu-bar').className = 'bar-fill cpu ' + barClass(cpuPct);
+  document.getElementById('cpu-detail').textContent = cpu.top_processes && cpu.top_processes.length
+    ? 'Top: ' + cpu.top_processes[0].name
+    : '—';
+
+  // RAM bar
+  const ramPct = ram.usage_pct || 0;
+  document.getElementById('ram-pct').textContent = ramPct + '%';
+  document.getElementById('ram-bar').style.width = Math.min(ramPct, 100) + '%';
+  document.getElementById('ram-bar').className = 'bar-fill ram ' + barClass(ramPct);
+  document.getElementById('ram-detail').textContent = ram.used_mb && ram.total_mb
+    ? ram.used_mb + ' / ' + ram.total_mb + ' MB'
+    : '—';
+
+  // Disk bar
+  const diskPct = disk.usage_pct || 0;
+  document.getElementById('disk-pct').textContent = diskPct + '%';
+  document.getElementById('disk-bar').style.width = Math.min(diskPct, 100) + '%';
+  document.getElementById('disk-bar').className = 'bar-fill disk ' + barClass(diskPct);
+  document.getElementById('disk-detail').textContent = disk.used_gb && disk.total_gb
+    ? disk.used_gb + ' / ' + disk.total_gb + ' GB'
+    : '—';
+
+  // UFW badge
+  const ufwEl = document.getElementById('ufw-status');
+  if (ufw.active) {
+    ufwEl.innerHTML = '<span class="badge ok">✅ Active</span>';
+  } else {
+    ufwEl.innerHTML = '<span class="badge err">❌ ' + (ufw.status || 'inactive') + '</span>';
+  }
+
+  // fail2ban
+  document.getElementById('f2b-total').textContent = f2b.total_banned || 0;
+  const jailsEl = document.getElementById('f2b-jails');
+  if (f2b.installed && f2b.jails && Object.keys(f2b.jails).length) {
+    jailsEl.innerHTML = Object.entries(f2b.jails)
+      .map(([name, count]) => '<span class="jail-badge">🔒 ' + name + ': ' + count + '</span>')
+      .join('');
+  } else {
+    jailsEl.innerHTML = '<span style="font-size:11px;color:var(--muted)">not installed or no jails</span>';
+  }
+
+  // Open ports
+  const ports = sec.open_ports || [];
+  const portsEl = document.getElementById('ports-list');
+  if (ports.length) {
+    portsEl.innerHTML = ports.map(p => '<span class="port-tag"><span class="port-num">:' + p.port + '</span> ' + (p.program || '') + '</span>').join('');
+  } else {
+    portsEl.innerHTML = '<span style="font-size:11px;color:var(--muted)">no listening ports</span>';
+  }
+
+  // Top processes
+  const procs = cpu.top_processes || [];
+  const procsEl = document.getElementById('procs-list');
+  if (procs.length) {
+    procsEl.innerHTML = procs.map((p, i) =>
+      '<div class="item-row">' +
+      '<span style="width:20px;font-size:10px;color:var(--muted);text-align:right">' + (i+1) + '</span>' +
+      '<span class="item-name">' + (p.name || '?') + ' <span style="font-size:10px;color:var(--muted)">PID ' + (p.pid || '?') + '</span></span>' +
+      '<span class="item-val" style="color:var(--blue)">' + (p.cpu || '0') + '%</span>' +
+      '</div>'
+    ).join('');
+  } else {
+    procsEl.innerHTML = '<div class="empty">No process data</div>';
+  }
+
+  // Timestamp
+  const now = new Date().toLocaleString();
+  document.getElementById('updated').textContent = now;
+  document.getElementById('last-update').textContent = now;
+
+  // Status dot color based on overall health
+  const maxLoad = Math.max(cpuPct, ramPct, diskPct);
+  const dot = document.getElementById('status-dot');
+  dot.className = 'dot ' + (maxLoad < 75 ? 'green' : maxLoad < 90 ? 'green' : 'red');
+}
+
+async function load() {
+  try {
+    const resp = await fetch('server_data.json', { cache: 'no-store' });
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    const data = await resp.json();
+    render(data);
+  } catch (err) {
+    document.getElementById('loading').innerHTML =
+      '<div class="empty">⚠️ Unable to load server data<br><small>' + err.message + '</small></div>';
+  }
+}
+
+// Initial load
+load();
+
+// Auto-refresh every 5 minutes
+setInterval(load, 5 * 60 * 1000);
+</script>
+</body>
+</html>
