@@ -1,17 +1,12 @@
 {
-  "timestamp": "2026-07-25T15:50:01Z",
+  "timestamp": "2026-07-25T15:52:39Z",
   "cpu": {
     "usage": 2.3,
     "top_processes": [
       {
-        "pid": "88355",
-        "name": "ps",
-        "cpu": "100"
-      },
-      {
-        "pid": "88346",
+        "pid": "89059",
         "name": "python3",
-        "cpu": "17.8"
+        "cpu": "20.0"
       },
       {
         "pid": "81308",
@@ -19,39 +14,44 @@
         "cpu": "3.2"
       },
       {
-        "pid": "88344",
-        "name": "server_update.s",
-        "cpu": "3.2"
-      },
-      {
         "pid": "63960",
         "name": "fail2ban-server",
         "cpu": "0.2"
+      },
+      {
+        "pid": "82825",
+        "name": "node",
+        "cpu": "0.0"
+      },
+      {
+        "pid": "1",
+        "name": "systemd",
+        "cpu": "0.0"
       }
     ]
   },
   "ram": {
-    "used_mb": 941,
+    "used_mb": 926,
     "total_mb": 1967,
-    "usage_pct": 47.8
+    "usage_pct": 47.1
   },
   "disk": {
     "used_gb": 9,
     "total_gb": 15,
     "usage_pct": 64
   },
-  "uptime": "4 days, 6 hours, 6 minutes",
+  "uptime": "4 days, 6 hours, 8 minutes",
   "loadavg": {
-    "load_1": 0.08,
+    "load_1": 0.04,
     "load_5": 0.04,
-    "load_15": 0.01
+    "load_15": 0.0
   },
   "network": {
     "iface": "eth0",
-    "rx_bytes": 3801647851,
-    "tx_bytes": 1292881841,
-    "rx_speed": 3171,
-    "tx_speed": 20907
+    "rx_bytes": 3804426262,
+    "tx_bytes": 1299760017,
+    "rx_speed": 8846,
+    "tx_speed": 21446
   },
   "temperature": {
     "available": false,
@@ -86,44 +86,56 @@
   "last_reboot": "2026-07-21 09:43",
   "security": {
     "ufw": {
-      "active": false,
-      "status": "unknown"
+      "active": true,
+      "status": "active"
     },
     "fail2ban": {
-      "total_banned": 0,
-      "jails": {},
-      "installed": false
+      "total_banned": 12,
+      "jails": {
+        "recidive": 0,
+        "sshd": 12
+      },
+      "installed": true
     },
-    "banned_ips": [],
+    "banned_ips": [
+      "216.57.110.81",
+      "160.119.71.211",
+      "195.178.110.137",
+      "47.253.5.130",
+      "129.204.201.118",
+      "47.81.39.24",
+      "118.70.178.158",
+      "159.65.143.47",
+      "165.232.61.133",
+      "68.183.234.194",
+      "49.64.169.224",
+      "47.252.16.44"
+    ],
     "login_attempts_24h": {
       "total": 0,
       "top_ips": []
     },
+    "ssh_attacks_24h": 56,
     "open_ports": [
       {
         "port": "2222",
         "address": "0.0.0.0:2222",
-        "program": "0.0.0.0:*"
+        "program": "users:((\"sshd\",pid=61280,fd=3),(\"systemd\",pid=1,fd=287))"
       },
       {
         "port": "631",
         "address": "[::1]:631",
-        "program": "[::]:*"
+        "program": "users:((\"cupsd\",pid=78463,fd=6))"
       },
       {
         "port": "2222",
         "address": "[::]:2222",
-        "program": "[::]:*"
-      },
-      {
-        "port": "5052",
-        "address": "127.0.0.1:5052",
-        "program": "users:((\"python3\",pid=82126,fd=4))"
+        "program": "users:((\"sshd\",pid=61280,fd=4),(\"systemd\",pid=1,fd=291))"
       },
       {
         "port": "631",
         "address": "127.0.0.1:631",
-        "program": "0.0.0.0:*"
+        "program": "users:((\"cupsd\",pid=78463,fd=7))"
       }
     ],
     "pending_security_updates": 0
@@ -173,6 +185,16 @@
       "ts": "2026-07-25T15:50:01Z",
       "cpu": 2.3,
       "ram": 47.8
+    },
+    {
+      "ts": "2026-07-25T15:52:23Z",
+      "cpu": 2.3,
+      "ram": 46.9
+    },
+    {
+      "ts": "2026-07-25T15:52:39Z",
+      "cpu": 2.3,
+      "ram": 47.1
     }
   ]
 }
