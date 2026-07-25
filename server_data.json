@@ -1,16 +1,16 @@
 {
   "cpu": {
-    "usage": 2.3,
+    "usage": 2.2,
     "top_processes": [
       {
-        "pid": "86914",
+        "pid": "86974",
         "name": "python3",
-        "cpu": "14.2"
+        "cpu": "17.8"
       },
       {
         "pid": "81308",
         "name": "hermes",
-        "cpu": "3.8"
+        "cpu": "3.7"
       },
       {
         "pid": "63960",
@@ -30,16 +30,16 @@
     ]
   },
   "ram": {
-    "used_mb": 943,
+    "used_mb": 941,
     "total_mb": 1967,
-    "usage_pct": 47.9
+    "usage_pct": 47.8
   },
   "disk": {
     "used_gb": 9,
     "total_gb": 15,
     "usage_pct": 64
   },
-  "uptime": "4 days, 5 hours, 21 minutes",
+  "uptime": "4 days, 5 hours, 26 minutes",
   "security": {
     "ufw": {
       "active": false,
