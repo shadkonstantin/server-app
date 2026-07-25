@@ -1,21 +1,21 @@
 {
   "cpu": {
-    "usage": 4.4,
+    "usage": 16.3,
     "top_processes": [
       {
-        "pid": "86695",
+        "pid": "86809",
         "name": "ps",
         "cpu": "100"
       },
       {
-        "pid": "86686",
+        "pid": "86801",
         "name": "python3",
         "cpu": "14.2"
       },
       {
         "pid": "81308",
         "name": "hermes",
-        "cpu": "3.9"
+        "cpu": "4.0"
       },
       {
         "pid": "63960",
@@ -39,7 +39,7 @@
     "total_gb": 15,
     "usage_pct": 64
   },
-  "uptime": "4 days, 5 hours, 6 minutes",
+  "uptime": "4 days, 5 hours, 11 minutes",
   "security": {
     "ufw": {
       "active": false,
