@@ -3,9 +3,9 @@
     "usage": 2.3,
     "top_processes": [
       {
-        "pid": "86225",
+        "pid": "86301",
         "name": "python3",
-        "cpu": "11.1"
+        "cpu": "17.8"
       },
       {
         "pid": "81308",
@@ -30,16 +30,16 @@
     ]
   },
   "ram": {
-    "used_mb": 920,
+    "used_mb": 926,
     "total_mb": 1967,
-    "usage_pct": 46.8
+    "usage_pct": 47.1
   },
   "disk": {
     "used_gb": 9,
     "total_gb": 15,
     "usage_pct": 64
   },
-  "uptime": "4 days, 4 hours, 39 minutes",
+  "uptime": "4 days, 4 hours, 41 minutes",
   "security": {
     "ufw": {
       "active": false,
