@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-07-26T08:50:01Z",
+  "timestamp": "2026-07-26T08:55:01Z",
   "cpu": {
-    "usage": 4.4,
+    "usage": 4.1,
     "top_processes": [
       {
-        "pid": "127594",
+        "pid": "127742",
         "name": "ps",
         "cpu": "100"
       },
       {
-        "pid": "127586",
+        "pid": "127735",
         "name": "python3",
-        "cpu": "26.4"
+        "cpu": "28.5"
       },
       {
         "pid": "120489",
@@ -31,7 +31,7 @@
     ]
   },
   "ram": {
-    "used_mb": 772,
+    "used_mb": 771,
     "total_mb": 1967,
     "usage_pct": 39.2
   },
@@ -40,7 +40,7 @@
     "total_gb": 15,
     "usage_pct": 65
   },
-  "uptime": "4 days, 23 hours, 6 minutes",
+  "uptime": "4 days, 23 hours, 11 minutes",
   "loadavg": {
     "load_1": 0.0,
     "load_5": 0.0,
@@ -48,10 +48,10 @@
   },
   "network": {
     "iface": "eth0",
-    "rx_bytes": 3955378924,
-    "tx_bytes": 1893106906,
-    "rx_speed": 535,
-    "tx_speed": 176
+    "rx_bytes": 3955515887,
+    "tx_bytes": 1893159529,
+    "rx_speed": 457,
+    "tx_speed": 175
   },
   "temperature": {
     "available": false,
@@ -134,11 +134,6 @@
     "pending_security_updates": 0
   },
   "history": [
-    {
-      "ts": "2026-07-26T07:15:01Z",
-      "cpu": 2.3,
-      "ram": 39.1
-    },
     {
       "ts": "2026-07-26T07:20:01Z",
       "cpu": 2.3,
@@ -232,6 +227,11 @@
     {
       "ts": "2026-07-26T08:50:01Z",
       "cpu": 4.4,
+      "ram": 39.2
+    },
+    {
+      "ts": "2026-07-26T08:55:01Z",
+      "cpu": 4.1,
       "ram": 39.2
     }
   ]
