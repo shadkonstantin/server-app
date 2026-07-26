@@ -1,57 +1,57 @@
 {
-  "timestamp": "2026-07-26T05:45:01Z",
+  "timestamp": "2026-07-26T05:50:01Z",
   "cpu": {
-    "usage": 15.9,
+    "usage": 4.6,
     "top_processes": [
       {
-        "pid": "121121",
+        "pid": "121392",
         "name": "ps",
         "cpu": "100"
       },
       {
-        "pid": "121114",
-        "name": "python3",
-        "cpu": "19.3"
-      },
-      {
         "pid": "120489",
         "name": "hermes",
-        "cpu": "13.3"
+        "cpu": "19.1"
+      },
+      {
+        "pid": "121384",
+        "name": "python3",
+        "cpu": "16.6"
+      },
+      {
+        "pid": "121381",
+        "name": "server_update.s",
+        "cpu": "3.1"
       },
       {
         "pid": "63960",
         "name": "fail2ban-server",
         "cpu": "0.2"
-      },
-      {
-        "pid": "1",
-        "name": "systemd",
-        "cpu": "0.0"
       }
     ]
   },
   "ram": {
-    "used_mb": 722,
+    "used_mb": 748,
     "total_mb": 1967,
-    "usage_pct": 36.7
+    "usage_pct": 38.0
   },
   "disk": {
     "used_gb": 9,
     "total_gb": 15,
     "usage_pct": 64
   },
-  "uptime": "4 days, 20 hours, 1 minute",
+  "uptime": "4 days, 20 hours, 6 minutes",
   "loadavg": {
-    "load_1": 0.01,
-    "load_5": 0.05,
-    "load_15": 0.06
+    "load_1": 0.03,
+    "load_5": 0.09,
+    "load_15": 0.08
   },
   "network": {
     "iface": "eth0",
-    "rx_bytes": 3931883750,
-    "tx_bytes": 1810863606,
-    "rx_speed": 4934,
-    "tx_speed": 77061
+    "rx_bytes": 3934286946,
+    "tx_bytes": 1846818603,
+    "rx_speed": 8020,
+    "tx_speed": 119997
   },
   "temperature": {
     "available": false,
@@ -134,11 +134,6 @@
     "pending_security_updates": 0
   },
   "history": [
-    {
-      "ts": "2026-07-26T04:10:01Z",
-      "cpu": 2.3,
-      "ram": 47.2
-    },
     {
       "ts": "2026-07-26T04:15:01Z",
       "cpu": 2.3,
@@ -233,6 +228,11 @@
       "ts": "2026-07-26T05:45:01Z",
       "cpu": 15.9,
       "ram": 36.7
+    },
+    {
+      "ts": "2026-07-26T05:50:01Z",
+      "cpu": 4.6,
+      "ram": 38.0
     }
   ]
 }
