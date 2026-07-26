@@ -1,57 +1,57 @@
 {
-  "timestamp": "2026-07-26T05:20:01Z",
+  "timestamp": "2026-07-26T05:25:01Z",
   "cpu": {
-    "usage": 17.8,
+    "usage": 2.3,
     "top_processes": [
       {
-        "pid": "119759",
-        "name": "ps",
-        "cpu": "100"
-      },
-      {
-        "pid": "119751",
+        "pid": "120002",
         "name": "python3",
-        "cpu": "21.8"
+        "cpu": "23.3"
       },
       {
         "pid": "116616",
         "name": "hermes",
-        "cpu": "13.2"
-      },
-      {
-        "pid": "119747",
-        "name": "sh",
-        "cpu": "2.7"
+        "cpu": "14.5"
       },
       {
         "pid": "63960",
         "name": "fail2ban-server",
         "cpu": "0.2"
+      },
+      {
+        "pid": "1",
+        "name": "systemd",
+        "cpu": "0.0"
+      },
+      {
+        "pid": "112167",
+        "name": "kworker/2:3-eve",
+        "cpu": "0.0"
       }
     ]
   },
   "ram": {
-    "used_mb": 761,
+    "used_mb": 802,
     "total_mb": 1967,
-    "usage_pct": 38.7
+    "usage_pct": 40.8
   },
   "disk": {
     "used_gb": 9,
     "total_gb": 15,
     "usage_pct": 64
   },
-  "uptime": "4 days, 19 hours, 36 minutes",
+  "uptime": "4 days, 19 hours, 41 minutes",
   "loadavg": {
-    "load_1": 0.08,
-    "load_5": 0.06,
-    "load_15": 0.04
+    "load_1": 0.01,
+    "load_5": 0.04,
+    "load_15": 0.03
   },
   "network": {
     "iface": "eth0",
-    "rx_bytes": 3923487323,
-    "tx_bytes": 1692672036,
-    "rx_speed": 5762,
-    "tx_speed": 247527
+    "rx_bytes": 3925066327,
+    "tx_bytes": 1746133797,
+    "rx_speed": 5264,
+    "tx_speed": 178224
   },
   "temperature": {
     "available": false,
@@ -134,11 +134,6 @@
     "pending_security_updates": 0
   },
   "history": [
-    {
-      "ts": "2026-07-26T03:45:01Z",
-      "cpu": 2.3,
-      "ram": 47.3
-    },
     {
       "ts": "2026-07-26T03:50:01Z",
       "cpu": 2.2,
@@ -233,6 +228,11 @@
       "ts": "2026-07-26T05:20:01Z",
       "cpu": 17.8,
       "ram": 38.7
+    },
+    {
+      "ts": "2026-07-26T05:25:01Z",
+      "cpu": 2.3,
+      "ram": 40.8
     }
   ]
 }
