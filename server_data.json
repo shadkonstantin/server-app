@@ -1,17 +1,22 @@
 {
-  "timestamp": "2026-07-26T08:45:01Z",
+  "timestamp": "2026-07-26T08:50:01Z",
   "cpu": {
-    "usage": 0.0,
+    "usage": 4.4,
     "top_processes": [
       {
-        "pid": "127439",
+        "pid": "127594",
+        "name": "ps",
+        "cpu": "100"
+      },
+      {
+        "pid": "127586",
         "name": "python3",
-        "cpu": "14.2"
+        "cpu": "26.4"
       },
       {
         "pid": "120489",
         "name": "hermes",
-        "cpu": "2.6"
+        "cpu": "2.5"
       },
       {
         "pid": "63960",
@@ -22,25 +27,20 @@
         "pid": "1",
         "name": "systemd",
         "cpu": "0.0"
-      },
-      {
-        "pid": "114957",
-        "name": "kworker/1:0-eve",
-        "cpu": "0.0"
       }
     ]
   },
   "ram": {
-    "used_mb": 769,
+    "used_mb": 772,
     "total_mb": 1967,
-    "usage_pct": 39.1
+    "usage_pct": 39.2
   },
   "disk": {
     "used_gb": 9,
     "total_gb": 15,
     "usage_pct": 65
   },
-  "uptime": "4 days, 23 hours, 1 minute",
+  "uptime": "4 days, 23 hours, 6 minutes",
   "loadavg": {
     "load_1": 0.0,
     "load_5": 0.0,
@@ -48,10 +48,10 @@
   },
   "network": {
     "iface": "eth0",
-    "rx_bytes": 3955218325,
-    "tx_bytes": 1893054078,
-    "rx_speed": 490,
-    "tx_speed": 186
+    "rx_bytes": 3955378924,
+    "tx_bytes": 1893106906,
+    "rx_speed": 535,
+    "tx_speed": 176
   },
   "temperature": {
     "available": false,
@@ -118,7 +118,7 @@
       "total": 0,
       "top_ips": []
     },
-    "ssh_attacks_24h": 66,
+    "ssh_attacks_24h": 64,
     "open_ports": [
       {
         "port": "2222",
@@ -134,11 +134,6 @@
     "pending_security_updates": 0
   },
   "history": [
-    {
-      "ts": "2026-07-26T07:10:01Z",
-      "cpu": 0.0,
-      "ram": 39.1
-    },
     {
       "ts": "2026-07-26T07:15:01Z",
       "cpu": 2.3,
@@ -233,6 +228,11 @@
       "ts": "2026-07-26T08:45:01Z",
       "cpu": 0.0,
       "ram": 39.1
+    },
+    {
+      "ts": "2026-07-26T08:50:01Z",
+      "cpu": 4.4,
+      "ram": 39.2
     }
   ]
 }
