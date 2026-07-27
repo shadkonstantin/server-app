@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-07-27T06:45:01Z",
+  "timestamp": "2026-07-27T06:50:01Z",
   "cpu": {
-    "usage": 2.3,
+    "usage": 0.0,
     "top_processes": [
       {
-        "pid": "170766",
+        "pid": "170915",
         "name": "python3",
-        "cpu": "23.3"
+        "cpu": "29.4"
       },
       {
         "pid": "120489",
@@ -31,16 +31,16 @@
     ]
   },
   "ram": {
-    "used_mb": 834,
+    "used_mb": 821,
     "total_mb": 1967,
-    "usage_pct": 42.4
+    "usage_pct": 41.7
   },
   "disk": {
     "used_gb": 9,
     "total_gb": 15,
     "usage_pct": 65
   },
-  "uptime": "5 days, 21 hours, 1 minute",
+  "uptime": "5 days, 21 hours, 6 minutes",
   "loadavg": {
     "load_1": 0.0,
     "load_5": 0.0,
@@ -48,10 +48,10 @@
   },
   "network": {
     "iface": "eth0",
-    "rx_bytes": 4060824199,
-    "tx_bytes": 2022901635,
-    "rx_speed": 604,
-    "tx_speed": 218
+    "rx_bytes": 4061011304,
+    "tx_bytes": 2022969103,
+    "rx_speed": 624,
+    "tx_speed": 225
   },
   "temperature": {
     "available": false,
@@ -90,10 +90,10 @@
       "status": "active"
     },
     "fail2ban": {
-      "total_banned": 19,
+      "total_banned": 20,
       "jails": {
         "recidive": 0,
-        "sshd": 19
+        "sshd": 20
       },
       "installed": true
     },
@@ -116,13 +116,14 @@
       "198.98.53.110",
       "83.97.78.224",
       "47.88.0.49",
-      "103.159.51.70"
+      "103.159.51.70",
+      "176.53.159.198"
     ],
     "login_attempts_24h": {
       "total": 0,
       "top_ips": []
     },
-    "ssh_attacks_24h": 89,
+    "ssh_attacks_24h": 91,
     "open_ports": [
       {
         "port": "2222",
@@ -138,11 +139,6 @@
     "pending_security_updates": 0
   },
   "history": [
-    {
-      "ts": "2026-07-27T05:10:01Z",
-      "cpu": 4.4,
-      "ram": 41.0
-    },
     {
       "ts": "2026-07-27T05:15:01Z",
       "cpu": 0.0,
@@ -237,6 +233,11 @@
       "ts": "2026-07-27T06:45:01Z",
       "cpu": 2.3,
       "ram": 42.4
+    },
+    {
+      "ts": "2026-07-27T06:50:01Z",
+      "cpu": 0.0,
+      "ram": 41.7
     }
   ]
 }
