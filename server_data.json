@@ -1,22 +1,17 @@
 {
-  "timestamp": "2026-07-27T02:40:01Z",
+  "timestamp": "2026-07-27T02:45:01Z",
   "cpu": {
-    "usage": 6.5,
+    "usage": 2.3,
     "top_processes": [
       {
-        "pid": "159860",
+        "pid": "160007",
         "name": "ps",
         "cpu": "100"
       },
       {
-        "pid": "159852",
+        "pid": "160000",
         "name": "python3",
-        "cpu": "21.8"
-      },
-      {
-        "pid": "159849",
-        "name": "server_update.s",
-        "cpu": "3.0"
+        "cpu": "17.8"
       },
       {
         "pid": "120489",
@@ -27,20 +22,25 @@
         "pid": "63960",
         "name": "fail2ban-server",
         "cpu": "0.2"
+      },
+      {
+        "pid": "159854",
+        "name": "kworker/1:0-eve",
+        "cpu": "0.0"
       }
     ]
   },
   "ram": {
-    "used_mb": 768,
+    "used_mb": 769,
     "total_mb": 1967,
-    "usage_pct": 39.0
+    "usage_pct": 39.1
   },
   "disk": {
     "used_gb": 9,
     "total_gb": 15,
     "usage_pct": 65
   },
-  "uptime": "5 days, 16 hours, 56 minutes",
+  "uptime": "5 days, 17 hours, 1 minute",
   "loadavg": {
     "load_1": 0.0,
     "load_5": 0.0,
@@ -48,10 +48,10 @@
   },
   "network": {
     "iface": "eth0",
-    "rx_bytes": 4007683592,
-    "tx_bytes": 1905386022,
-    "rx_speed": 958,
-    "tx_speed": 185
+    "rx_bytes": 4007950403,
+    "tx_bytes": 1905438646,
+    "rx_speed": 890,
+    "tx_speed": 175
   },
   "temperature": {
     "available": false,
@@ -136,11 +136,6 @@
     "pending_security_updates": 0
   },
   "history": [
-    {
-      "ts": "2026-07-27T01:05:01Z",
-      "cpu": 2.2,
-      "ram": 38.0
-    },
     {
       "ts": "2026-07-27T01:10:02Z",
       "cpu": 2.2,
@@ -235,6 +230,11 @@
       "ts": "2026-07-27T02:40:01Z",
       "cpu": 6.5,
       "ram": 39.0
+    },
+    {
+      "ts": "2026-07-27T02:45:01Z",
+      "cpu": 2.3,
+      "ram": 39.1
     }
   ]
 }
