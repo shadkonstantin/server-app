@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-07-28T09:25:01Z",
+  "timestamp": "2026-07-28T09:30:01Z",
   "cpu": {
-    "usage": 2.3,
+    "usage": 4.6,
     "top_processes": [
       {
-        "pid": "222537",
+        "pid": "222683",
         "name": "python3",
-        "cpu": "16.6"
+        "cpu": "17.8"
       },
       {
         "pid": "120489",
@@ -19,28 +19,28 @@
         "cpu": "0.2"
       },
       {
-        "pid": "220535",
-        "name": "kworker/1:2-eve",
+        "pid": "222391",
+        "name": "kworker/2:3-eve",
         "cpu": "0.0"
       },
       {
-        "pid": "215332",
-        "name": "kworker/2:0-eve",
+        "pid": "220535",
+        "name": "kworker/1:2-eve",
         "cpu": "0.0"
       }
     ]
   },
   "ram": {
-    "used_mb": 857,
+    "used_mb": 861,
     "total_mb": 1967,
-    "usage_pct": 43.6
+    "usage_pct": 43.8
   },
   "disk": {
     "used_gb": 9,
     "total_gb": 15,
     "usage_pct": 65
   },
-  "uptime": "6 days, 23 hours, 41 minutes",
+  "uptime": "6 days, 23 hours, 46 minutes",
   "loadavg": {
     "load_1": 0.0,
     "load_5": 0.0,
@@ -48,10 +48,10 @@
   },
   "network": {
     "iface": "eth0",
-    "rx_bytes": 4196558330,
-    "tx_bytes": 2119488497,
-    "rx_speed": 459,
-    "tx_speed": 187
+    "rx_bytes": 4196687190,
+    "tx_bytes": 2119540912,
+    "rx_speed": 429,
+    "tx_speed": 175
   },
   "temperature": {
     "available": false,
@@ -143,11 +143,6 @@
     "pending_security_updates": 0
   },
   "history": [
-    {
-      "ts": "2026-07-28T07:50:01Z",
-      "cpu": 2.3,
-      "ram": 42.9
-    },
     {
       "ts": "2026-07-28T07:55:01Z",
       "cpu": 2.3,
@@ -242,6 +237,11 @@
       "ts": "2026-07-28T09:25:01Z",
       "cpu": 2.3,
       "ram": 43.6
+    },
+    {
+      "ts": "2026-07-28T09:30:01Z",
+      "cpu": 4.6,
+      "ram": 43.8
     }
   ]
 }
