@@ -1,12 +1,22 @@
 {
-  "timestamp": "2026-07-29T03:55:01Z",
+  "timestamp": "2026-07-29T04:00:02Z",
   "cpu": {
-    "usage": 4.6,
+    "usage": 2.2,
     "top_processes": [
       {
-        "pid": "255784",
+        "pid": "255938",
+        "name": "ps",
+        "cpu": "100"
+      },
+      {
+        "pid": "255930",
         "name": "python3",
-        "cpu": "17.8"
+        "cpu": "24.2"
+      },
+      {
+        "pid": "255927",
+        "name": "server_update.s",
+        "cpu": "2.8"
       },
       {
         "pid": "120489",
@@ -17,16 +27,6 @@
         "pid": "63960",
         "name": "fail2ban-server",
         "cpu": "0.2"
-      },
-      {
-        "pid": "16227",
-        "name": "systemd-journal",
-        "cpu": "0.0"
-      },
-      {
-        "pid": "22414",
-        "name": "multipathd",
-        "cpu": "0.0"
       }
     ]
   },
@@ -40,7 +40,7 @@
     "total_gb": 15,
     "usage_pct": 66
   },
-  "uptime": "1 week, 18 hours, 11 minutes",
+  "uptime": "1 week, 18 hours, 16 minutes",
   "loadavg": {
     "load_1": 0.0,
     "load_5": 0.0,
@@ -48,10 +48,10 @@
   },
   "network": {
     "iface": "eth0",
-    "rx_bytes": 4236303891,
-    "tx_bytes": 2131492683,
-    "rx_speed": 423,
-    "tx_speed": 175
+    "rx_bytes": 4236441943,
+    "tx_bytes": 2131548801,
+    "rx_speed": 460,
+    "tx_speed": 187
   },
   "temperature": {
     "available": false,
@@ -143,11 +143,6 @@
     "pending_security_updates": 0
   },
   "history": [
-    {
-      "ts": "2026-07-29T02:20:01Z",
-      "cpu": 0.0,
-      "ram": 43.1
-    },
     {
       "ts": "2026-07-29T02:25:01Z",
       "cpu": 0.0,
@@ -241,6 +236,11 @@
     {
       "ts": "2026-07-29T03:55:01Z",
       "cpu": 4.6,
+      "ram": 43.8
+    },
+    {
+      "ts": "2026-07-29T04:00:02Z",
+      "cpu": 2.2,
       "ram": 43.8
     }
   ]
