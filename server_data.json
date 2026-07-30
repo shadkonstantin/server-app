@@ -1,15 +1,15 @@
 {
-  "timestamp": "2026-07-30T09:45:01Z",
+  "timestamp": "2026-07-30T09:50:01Z",
   "cpu": {
-    "usage": 0.0,
+    "usage": 2.3,
     "top_processes": [
       {
-        "pid": "312588",
+        "pid": "312741",
         "name": "ps",
         "cpu": "100"
       },
       {
-        "pid": "312581",
+        "pid": "312731",
         "name": "python3",
         "cpu": "14.2"
       },
@@ -24,34 +24,34 @@
         "cpu": "0.2"
       },
       {
-        "pid": "312132",
-        "name": "kworker/1:0-eve",
+        "pid": "16227",
+        "name": "systemd-journal",
         "cpu": "0.0"
       }
     ]
   },
   "ram": {
-    "used_mb": 729,
+    "used_mb": 724,
     "total_mb": 1967,
-    "usage_pct": 37.1
+    "usage_pct": 36.8
   },
   "disk": {
     "used_gb": 10,
     "total_gb": 15,
     "usage_pct": 66
   },
-  "uptime": "1 week, 2 days, 1 minute",
+  "uptime": "1 week, 2 days, 6 minutes",
   "loadavg": {
-    "load_1": 0.0,
-    "load_5": 0.0,
+    "load_1": 0.02,
+    "load_5": 0.01,
     "load_15": 0.0
   },
   "network": {
     "iface": "eth0",
-    "rx_bytes": 4362198475,
-    "tx_bytes": 2251472594,
-    "rx_speed": 449,
-    "tx_speed": 185
+    "rx_bytes": 4362336810,
+    "tx_bytes": 2251531119,
+    "rx_speed": 461,
+    "tx_speed": 195
   },
   "temperature": {
     "available": false,
@@ -90,10 +90,10 @@
       "status": "active"
     },
     "fail2ban": {
-      "total_banned": 119,
+      "total_banned": 120,
       "jails": {
         "recidive": 0,
-        "sshd": 119
+        "sshd": 120
       },
       "installed": true
     },
@@ -216,13 +216,14 @@
       "218.157.251.94",
       "195.222.57.183",
       "220.122.115.9",
-      "41.220.3.101"
+      "41.220.3.101",
+      "220.134.25.203"
     ],
     "login_attempts_24h": {
       "total": 0,
       "top_ips": []
     },
-    "ssh_attacks_24h": 163,
+    "ssh_attacks_24h": 165,
     "open_ports": [
       {
         "port": "2222",
@@ -238,11 +239,6 @@
     "pending_security_updates": 0
   },
   "history": [
-    {
-      "ts": "2026-07-30T08:10:02Z",
-      "cpu": 2.2,
-      "ram": 37.4
-    },
     {
       "ts": "2026-07-30T08:15:01Z",
       "cpu": 2.2,
@@ -337,6 +333,11 @@
       "ts": "2026-07-30T09:45:01Z",
       "cpu": 0.0,
       "ram": 37.1
+    },
+    {
+      "ts": "2026-07-30T09:50:01Z",
+      "cpu": 2.3,
+      "ram": 36.8
     }
   ]
 }
