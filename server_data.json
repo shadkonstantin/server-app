@@ -1,17 +1,12 @@
 {
-  "timestamp": "2026-07-30T19:45:01Z",
+  "timestamp": "2026-07-30T19:50:01Z",
   "cpu": {
-    "usage": 4.4,
+    "usage": 2.3,
     "top_processes": [
       {
-        "pid": "331105",
-        "name": "ps",
-        "cpu": "100"
-      },
-      {
-        "pid": "331098",
+        "pid": "331249",
         "name": "python3",
-        "cpu": "29.4"
+        "cpu": "28.1"
       },
       {
         "pid": "302922",
@@ -27,31 +22,36 @@
         "pid": "327579",
         "name": "kworker/2:1-eve",
         "cpu": "0.0"
+      },
+      {
+        "pid": "16227",
+        "name": "systemd-journal",
+        "cpu": "0.0"
       }
     ]
   },
   "ram": {
-    "used_mb": 728,
+    "used_mb": 736,
     "total_mb": 1967,
-    "usage_pct": 37.0
+    "usage_pct": 37.4
   },
   "disk": {
     "used_gb": 10,
     "total_gb": 15,
     "usage_pct": 66
   },
-  "uptime": "1 week, 2 days, 10 hours, 1 minute",
+  "uptime": "1 week, 2 days, 10 hours, 6 minutes",
   "loadavg": {
-    "load_1": 0.0,
-    "load_5": 0.01,
+    "load_1": 0.05,
+    "load_5": 0.03,
     "load_15": 0.0
   },
   "network": {
     "iface": "eth0",
-    "rx_bytes": 4395179048,
-    "tx_bytes": 2265593608,
-    "rx_speed": 717,
-    "tx_speed": 195
+    "rx_bytes": 4395369958,
+    "tx_bytes": 2265648933,
+    "rx_speed": 637,
+    "tx_speed": 184
   },
   "temperature": {
     "available": false,
@@ -90,10 +90,10 @@
       "status": "active"
     },
     "fail2ban": {
-      "total_banned": 155,
+      "total_banned": 156,
       "jails": {
         "recidive": 0,
-        "sshd": 155
+        "sshd": 156
       },
       "installed": true
     },
@@ -252,13 +252,14 @@
       "78.189.17.35",
       "50.187.155.130",
       "121.202.138.181",
-      "113.28.86.1"
+      "113.28.86.1",
+      "81.236.211.54"
     ],
     "login_attempts_24h": {
       "total": 0,
       "top_ips": []
     },
-    "ssh_attacks_24h": 180,
+    "ssh_attacks_24h": 182,
     "open_ports": [
       {
         "port": "2222",
@@ -274,11 +275,6 @@
     "pending_security_updates": 0
   },
   "history": [
-    {
-      "ts": "2026-07-30T18:10:01Z",
-      "cpu": 2.3,
-      "ram": 37.5
-    },
     {
       "ts": "2026-07-30T18:15:01Z",
       "cpu": 2.3,
@@ -373,6 +369,11 @@
       "ts": "2026-07-30T19:45:01Z",
       "cpu": 4.4,
       "ram": 37.0
+    },
+    {
+      "ts": "2026-07-30T19:50:01Z",
+      "cpu": 2.3,
+      "ram": 37.4
     }
   ]
 }
