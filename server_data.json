@@ -1,22 +1,17 @@
 {
-  "timestamp": "2026-07-30T18:45:01Z",
+  "timestamp": "2026-07-30T18:50:01Z",
   "cpu": {
     "usage": 2.3,
     "top_processes": [
       {
-        "pid": "329254",
-        "name": "ps",
-        "cpu": "100"
-      },
-      {
-        "pid": "329247",
+        "pid": "329445",
         "name": "python3",
         "cpu": "17.8"
       },
       {
         "pid": "302922",
         "name": "hermes",
-        "cpu": "0.7"
+        "cpu": "0.6"
       },
       {
         "pid": "63960",
@@ -24,8 +19,13 @@
         "cpu": "0.2"
       },
       {
-        "pid": "329231",
-        "name": "apt-helper",
+        "pid": "327579",
+        "name": "kworker/2:1-eve",
+        "cpu": "0.0"
+      },
+      {
+        "pid": "16227",
+        "name": "systemd-journal",
         "cpu": "0.0"
       }
     ]
@@ -40,7 +40,7 @@
     "total_gb": 15,
     "usage_pct": 66
   },
-  "uptime": "1 week, 2 days, 9 hours, 1 minute",
+  "uptime": "1 week, 2 days, 9 hours, 6 minutes",
   "loadavg": {
     "load_1": 0.0,
     "load_5": 0.0,
@@ -48,10 +48,10 @@
   },
   "network": {
     "iface": "eth0",
-    "rx_bytes": 4392863908,
-    "tx_bytes": 2264929254,
-    "rx_speed": 663,
-    "tx_speed": 190
+    "rx_bytes": 4393046994,
+    "tx_bytes": 2264982448,
+    "rx_speed": 609,
+    "tx_speed": 177
   },
   "temperature": {
     "available": false,
@@ -271,11 +271,6 @@
   },
   "history": [
     {
-      "ts": "2026-07-30T17:10:01Z",
-      "cpu": 4.4,
-      "ram": 37.2
-    },
-    {
       "ts": "2026-07-30T17:15:01Z",
       "cpu": 4.6,
       "ram": 37.9
@@ -367,6 +362,11 @@
     },
     {
       "ts": "2026-07-30T18:45:01Z",
+      "cpu": 2.3,
+      "ram": 37.2
+    },
+    {
+      "ts": "2026-07-30T18:50:01Z",
       "cpu": 2.3,
       "ram": 37.2
     }
