@@ -1,17 +1,12 @@
 {
-  "timestamp": "2026-07-31T04:45:01Z",
+  "timestamp": "2026-07-31T04:50:01Z",
   "cpu": {
     "usage": 4.4,
     "top_processes": [
       {
-        "pid": "347412",
-        "name": "ps",
-        "cpu": "100"
-      },
-      {
-        "pid": "347405",
+        "pid": "347551",
         "name": "python3",
-        "cpu": "20.0"
+        "cpu": "14.2"
       },
       {
         "pid": "302922",
@@ -27,31 +22,36 @@
         "pid": "346060",
         "name": "kworker/2:2-eve",
         "cpu": "0.0"
+      },
+      {
+        "pid": "16227",
+        "name": "systemd-journal",
+        "cpu": "0.0"
       }
     ]
   },
   "ram": {
-    "used_mb": 729,
+    "used_mb": 744,
     "total_mb": 1967,
-    "usage_pct": 37.1
+    "usage_pct": 37.8
   },
   "disk": {
     "used_gb": 10,
     "total_gb": 15,
     "usage_pct": 67
   },
-  "uptime": "1 week, 2 days, 19 hours, 1 minute",
+  "uptime": "1 week, 2 days, 19 hours, 6 minutes",
   "loadavg": {
     "load_1": 0.0,
-    "load_5": 0.0,
+    "load_5": 0.02,
     "load_15": 0.0
   },
   "network": {
     "iface": "eth0",
-    "rx_bytes": 4415572226,
-    "tx_bytes": 2271591833,
-    "rx_speed": 575,
-    "tx_speed": 184
+    "rx_bytes": 4415722854,
+    "tx_bytes": 2271644301,
+    "rx_speed": 503,
+    "tx_speed": 175
   },
   "temperature": {
     "available": false,
@@ -286,7 +286,7 @@
       "total": 0,
       "top_ips": []
     },
-    "ssh_attacks_24h": 187,
+    "ssh_attacks_24h": 185,
     "open_ports": [
       {
         "port": "2222",
@@ -302,11 +302,6 @@
     "pending_security_updates": 0
   },
   "history": [
-    {
-      "ts": "2026-07-31T03:10:01Z",
-      "cpu": 4.4,
-      "ram": 37.5
-    },
     {
       "ts": "2026-07-31T03:15:01Z",
       "cpu": 2.3,
@@ -401,6 +396,11 @@
       "ts": "2026-07-31T04:45:01Z",
       "cpu": 4.4,
       "ram": 37.1
+    },
+    {
+      "ts": "2026-07-31T04:50:01Z",
+      "cpu": 4.4,
+      "ram": 37.8
     }
   ]
 }
