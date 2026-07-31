@@ -1,12 +1,22 @@
 {
-  "timestamp": "2026-07-31T05:25:01Z",
+  "timestamp": "2026-07-31T05:30:01Z",
   "cpu": {
-    "usage": 0.0,
+    "usage": 2.3,
     "top_processes": [
       {
-        "pid": "348609",
+        "pid": "348767",
+        "name": "ps",
+        "cpu": "100"
+      },
+      {
+        "pid": "348758",
         "name": "python3",
         "cpu": "17.8"
+      },
+      {
+        "pid": "348754",
+        "name": "sh",
+        "cpu": "3.2"
       },
       {
         "pid": "302922",
@@ -17,30 +27,20 @@
         "pid": "63960",
         "name": "fail2ban-server",
         "cpu": "0.2"
-      },
-      {
-        "pid": "346060",
-        "name": "kworker/2:2-eve",
-        "cpu": "0.0"
-      },
-      {
-        "pid": "347555",
-        "name": "kworker/1:2-eve",
-        "cpu": "0.0"
       }
     ]
   },
   "ram": {
-    "used_mb": 737,
+    "used_mb": 734,
     "total_mb": 1967,
-    "usage_pct": 37.5
+    "usage_pct": 37.3
   },
   "disk": {
     "used_gb": 10,
     "total_gb": 15,
     "usage_pct": 67
   },
-  "uptime": "1 week, 2 days, 19 hours, 41 minutes",
+  "uptime": "1 week, 2 days, 19 hours, 46 minutes",
   "loadavg": {
     "load_1": 0.0,
     "load_5": 0.0,
@@ -48,10 +48,10 @@
   },
   "network": {
     "iface": "eth0",
-    "rx_bytes": 4416852604,
-    "tx_bytes": 2272033933,
-    "rx_speed": 569,
-    "tx_speed": 186
+    "rx_bytes": 4417009099,
+    "tx_bytes": 2272088888,
+    "rx_speed": 522,
+    "tx_speed": 183
   },
   "temperature": {
     "available": false,
@@ -90,10 +90,10 @@
       "status": "active"
     },
     "fail2ban": {
-      "total_banned": 185,
+      "total_banned": 186,
       "jails": {
         "recidive": 0,
-        "sshd": 185
+        "sshd": 186
       },
       "installed": true
     },
@@ -282,13 +282,14 @@
       "187.115.144.103",
       "200.37.179.83",
       "79.136.8.69",
-      "197.251.249.75"
+      "197.251.249.75",
+      "80.233.12.109"
     ],
     "login_attempts_24h": {
       "total": 0,
       "top_ips": []
     },
-    "ssh_attacks_24h": 182,
+    "ssh_attacks_24h": 184,
     "open_ports": [
       {
         "port": "2222",
@@ -304,11 +305,6 @@
     "pending_security_updates": 0
   },
   "history": [
-    {
-      "ts": "2026-07-31T03:50:01Z",
-      "cpu": 2.3,
-      "ram": 37.6
-    },
     {
       "ts": "2026-07-31T03:55:01Z",
       "cpu": 2.3,
@@ -403,6 +399,11 @@
       "ts": "2026-07-31T05:25:01Z",
       "cpu": 0.0,
       "ram": 37.5
+    },
+    {
+      "ts": "2026-07-31T05:30:01Z",
+      "cpu": 2.3,
+      "ram": 37.3
     }
   ]
 }
