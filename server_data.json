@@ -1,57 +1,57 @@
 {
-  "timestamp": "2026-07-31T06:00:01Z",
+  "timestamp": "2026-07-31T06:05:01Z",
   "cpu": {
-    "usage": 2.3,
+    "usage": 4.6,
     "top_processes": [
       {
-        "pid": "349679",
-        "name": "ps",
-        "cpu": "100"
-      },
-      {
-        "pid": "349669",
+        "pid": "349851",
         "name": "python3",
-        "cpu": "28.5"
-      },
-      {
-        "pid": "349671",
-        "name": "curl",
-        "cpu": "2.8"
-      },
-      {
-        "pid": "349664",
-        "name": "server_update.s",
-        "cpu": "2.7"
+        "cpu": "22.5"
       },
       {
         "pid": "302922",
         "name": "hermes",
         "cpu": "0.5"
+      },
+      {
+        "pid": "63960",
+        "name": "fail2ban-server",
+        "cpu": "0.2"
+      },
+      {
+        "pid": "346060",
+        "name": "kworker/2:2-eve",
+        "cpu": "0.0"
+      },
+      {
+        "pid": "16227",
+        "name": "systemd-journal",
+        "cpu": "0.0"
       }
     ]
   },
   "ram": {
-    "used_mb": 728,
+    "used_mb": 729,
     "total_mb": 1967,
-    "usage_pct": 37.0
+    "usage_pct": 37.1
   },
   "disk": {
     "used_gb": 10,
     "total_gb": 15,
     "usage_pct": 67
   },
-  "uptime": "1 week, 2 days, 20 hours, 16 minutes",
+  "uptime": "1 week, 2 days, 20 hours, 21 minutes",
   "loadavg": {
-    "load_1": 0.02,
+    "load_1": 0.06,
     "load_5": 0.01,
     "load_15": 0.0
   },
   "network": {
     "iface": "eth0",
-    "rx_bytes": 4417975149,
-    "tx_bytes": 2272415463,
-    "rx_speed": 544,
-    "tx_speed": 185
+    "rx_bytes": 4419378706,
+    "tx_bytes": 2272511904,
+    "rx_speed": 4675,
+    "tx_speed": 321
   },
   "temperature": {
     "available": false,
@@ -90,10 +90,10 @@
       "status": "active"
     },
     "fail2ban": {
-      "total_banned": 186,
+      "total_banned": 187,
       "jails": {
         "recidive": 0,
-        "sshd": 186
+        "sshd": 187
       },
       "installed": true
     },
@@ -283,13 +283,14 @@
       "79.136.8.69",
       "197.251.249.75",
       "80.233.12.109",
-      "65.20.251.41"
+      "65.20.251.41",
+      "46.210.94.61"
     ],
     "login_attempts_24h": {
       "total": 0,
       "top_ips": []
     },
-    "ssh_attacks_24h": 184,
+    "ssh_attacks_24h": 186,
     "open_ports": [
       {
         "port": "2222",
@@ -305,11 +306,6 @@
     "pending_security_updates": 0
   },
   "history": [
-    {
-      "ts": "2026-07-31T04:25:01Z",
-      "cpu": 2.3,
-      "ram": 37.5
-    },
     {
       "ts": "2026-07-31T04:30:01Z",
       "cpu": 0.0,
@@ -404,6 +400,11 @@
       "ts": "2026-07-31T06:00:01Z",
       "cpu": 2.3,
       "ram": 37.0
+    },
+    {
+      "ts": "2026-07-31T06:05:01Z",
+      "cpu": 4.6,
+      "ram": 37.1
     }
   ]
 }
