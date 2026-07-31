@@ -1,15 +1,10 @@
 {
-  "timestamp": "2026-07-31T05:50:01Z",
+  "timestamp": "2026-07-31T05:55:01Z",
   "cpu": {
-    "usage": 2.3,
+    "usage": 2.2,
     "top_processes": [
       {
-        "pid": "349364",
-        "name": "ps",
-        "cpu": "100"
-      },
-      {
-        "pid": "349354",
+        "pid": "349509",
         "name": "python3",
         "cpu": "20.0"
       },
@@ -25,33 +20,38 @@
       },
       {
         "pid": "346060",
-        "name": "kworker/2:2-eve",
+        "name": "kworker/2:2-mm_",
+        "cpu": "0.0"
+      },
+      {
+        "pid": "16227",
+        "name": "systemd-journal",
         "cpu": "0.0"
       }
     ]
   },
   "ram": {
-    "used_mb": 734,
+    "used_mb": 726,
     "total_mb": 1967,
-    "usage_pct": 37.3
+    "usage_pct": 36.9
   },
   "disk": {
     "used_gb": 10,
     "total_gb": 15,
     "usage_pct": 67
   },
-  "uptime": "1 week, 2 days, 20 hours, 6 minutes",
+  "uptime": "1 week, 2 days, 20 hours, 11 minutes",
   "loadavg": {
-    "load_1": 0.06,
-    "load_5": 0.02,
+    "load_1": 0.0,
+    "load_5": 0.0,
     "load_15": 0.0
   },
   "network": {
     "iface": "eth0",
-    "rx_bytes": 4417651218,
-    "tx_bytes": 2272304661,
-    "rx_speed": 517,
-    "tx_speed": 175
+    "rx_bytes": 4417812132,
+    "tx_bytes": 2272359951,
+    "rx_speed": 535,
+    "tx_speed": 184
   },
   "temperature": {
     "available": false,
@@ -90,10 +90,10 @@
       "status": "active"
     },
     "fail2ban": {
-      "total_banned": 186,
+      "total_banned": 187,
       "jails": {
         "recidive": 0,
-        "sshd": 186
+        "sshd": 187
       },
       "installed": true
     },
@@ -283,13 +283,14 @@
       "200.37.179.83",
       "79.136.8.69",
       "197.251.249.75",
-      "80.233.12.109"
+      "80.233.12.109",
+      "65.20.251.41"
     ],
     "login_attempts_24h": {
       "total": 0,
       "top_ips": []
     },
-    "ssh_attacks_24h": 182,
+    "ssh_attacks_24h": 184,
     "open_ports": [
       {
         "port": "2222",
@@ -305,11 +306,6 @@
     "pending_security_updates": 0
   },
   "history": [
-    {
-      "ts": "2026-07-31T04:15:01Z",
-      "cpu": 2.3,
-      "ram": 37.4
-    },
     {
       "ts": "2026-07-31T04:20:02Z",
       "cpu": 0.0,
@@ -404,6 +400,11 @@
       "ts": "2026-07-31T05:50:01Z",
       "cpu": 2.3,
       "ram": 37.3
+    },
+    {
+      "ts": "2026-07-31T05:55:01Z",
+      "cpu": 2.2,
+      "ram": 36.9
     }
   ]
 }
