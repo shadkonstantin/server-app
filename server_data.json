@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-02T19:00:01Z",
+  "timestamp": "2026-08-02T19:05:01Z",
   "cpu": {
     "usage": 2.3,
     "top_processes": [
       {
-        "pid": "460596",
+        "pid": "460762",
         "name": "python3",
-        "cpu": "14.2"
+        "cpu": "25.0"
       },
       {
         "pid": "302922",
@@ -31,16 +31,16 @@
     ]
   },
   "ram": {
-    "used_mb": 749,
+    "used_mb": 736,
     "total_mb": 1967,
-    "usage_pct": 38.1
+    "usage_pct": 37.4
   },
   "disk": {
     "used_gb": 10,
     "total_gb": 15,
     "usage_pct": 67
   },
-  "uptime": "1 week, 5 days, 9 hours, 16 minutes",
+  "uptime": "1 week, 5 days, 9 hours, 21 minutes",
   "loadavg": {
     "load_1": 0.0,
     "load_5": 0.0,
@@ -48,10 +48,10 @@
   },
   "network": {
     "iface": "eth0",
-    "rx_bytes": 4537788315,
-    "tx_bytes": 2316822904,
-    "rx_speed": 423,
-    "tx_speed": 178
+    "rx_bytes": 4537939164,
+    "tx_bytes": 2316888040,
+    "rx_speed": 504,
+    "tx_speed": 217
   },
   "temperature": {
     "available": false,
@@ -90,10 +90,10 @@
       "status": "active"
     },
     "fail2ban": {
-      "total_banned": 304,
+      "total_banned": 305,
       "jails": {
         "recidive": 0,
-        "sshd": 304
+        "sshd": 305
       },
       "installed": true
     },
@@ -401,13 +401,14 @@
       "106.245.246.26",
       "218.26.205.154",
       "118.43.236.237",
-      "203.110.233.225"
+      "203.110.233.225",
+      "85.105.2.51"
     ],
     "login_attempts_24h": {
       "total": 0,
       "top_ips": []
     },
-    "ssh_attacks_24h": 98,
+    "ssh_attacks_24h": 100,
     "open_ports": [
       {
         "port": "2222",
@@ -423,11 +424,6 @@
     "pending_security_updates": 0
   },
   "history": [
-    {
-      "ts": "2026-08-02T17:25:01Z",
-      "cpu": 2.2,
-      "ram": 39.1
-    },
     {
       "ts": "2026-08-02T17:30:01Z",
       "cpu": 4.4,
@@ -522,6 +518,11 @@
       "ts": "2026-08-02T19:00:01Z",
       "cpu": 2.3,
       "ram": 38.1
+    },
+    {
+      "ts": "2026-08-02T19:05:01Z",
+      "cpu": 2.3,
+      "ram": 37.4
     }
   ]
 }
