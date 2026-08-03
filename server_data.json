@@ -1,17 +1,22 @@
 {
-  "timestamp": "2026-08-03T20:35:01Z",
+  "timestamp": "2026-08-03T20:40:01Z",
   "cpu": {
-    "usage": 0.0,
+    "usage": 7.0,
     "top_processes": [
       {
-        "pid": "510891",
+        "pid": "511140",
         "name": "python3",
-        "cpu": "14.2"
+        "cpu": "21.8"
       },
       {
-        "pid": "509973",
+        "pid": "511138",
+        "name": "server_update.s",
+        "cpu": "5.7"
+      },
+      {
+        "pid": "511106",
         "name": "hermes",
-        "cpu": "2.3"
+        "cpu": "5.1"
       },
       {
         "pid": "63960",
@@ -22,36 +27,31 @@
         "pid": "505895",
         "name": "kworker/1:2-eve",
         "cpu": "0.0"
-      },
-      {
-        "pid": "509543",
-        "name": "kworker/2:1-mm_",
-        "cpu": "0.0"
       }
     ]
   },
   "ram": {
-    "used_mb": 625,
+    "used_mb": 604,
     "total_mb": 1967,
-    "usage_pct": 31.8
+    "usage_pct": 30.7
   },
   "disk": {
     "used_gb": 10,
     "total_gb": 15,
     "usage_pct": 70
   },
-  "uptime": "1 week, 6 days, 10 hours, 51 minutes",
+  "uptime": "1 week, 6 days, 10 hours, 56 minutes",
   "loadavg": {
-    "load_1": 0.02,
-    "load_5": 0.04,
-    "load_15": 0.03
+    "load_1": 0.0,
+    "load_5": 0.02,
+    "load_15": 0.01
   },
   "network": {
     "iface": "eth0",
-    "rx_bytes": 4830381347,
-    "tx_bytes": 2645348060,
-    "rx_speed": 19437,
-    "tx_speed": 19492
+    "rx_bytes": 4832386687,
+    "tx_bytes": 2647254325,
+    "rx_speed": 6692,
+    "tx_speed": 6361
   },
   "temperature": {
     "available": false,
@@ -445,7 +445,7 @@
       "total": 0,
       "top_ips": []
     },
-    "ssh_attacks_24h": 112,
+    "ssh_attacks_24h": 108,
     "open_ports": [
       {
         "port": "2222",
@@ -461,11 +461,6 @@
     "pending_security_updates": 0
   },
   "history": [
-    {
-      "ts": "2026-08-03T19:00:01Z",
-      "cpu": 2.3,
-      "ram": 32.1
-    },
     {
       "ts": "2026-08-03T19:05:01Z",
       "cpu": 2.3,
@@ -560,6 +555,11 @@
       "ts": "2026-08-03T20:35:01Z",
       "cpu": 0.0,
       "ram": 31.8
+    },
+    {
+      "ts": "2026-08-03T20:40:01Z",
+      "cpu": 7.0,
+      "ram": 30.7
     }
   ]
 }
