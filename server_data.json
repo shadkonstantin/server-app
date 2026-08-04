@@ -1,17 +1,22 @@
 {
-  "timestamp": "2026-08-04T14:55:01Z",
+  "timestamp": "2026-08-04T15:00:01Z",
   "cpu": {
-    "usage": 2.3,
+    "usage": 2.2,
     "top_processes": [
       {
-        "pid": "545360",
+        "pid": "545511",
         "name": "ps",
         "cpu": "100"
       },
       {
-        "pid": "545353",
+        "pid": "545503",
         "name": "python3",
-        "cpu": "17.8"
+        "cpu": "29.4"
+      },
+      {
+        "pid": "545500",
+        "name": "server_update.s",
+        "cpu": "2.7"
       },
       {
         "pid": "511106",
@@ -22,25 +27,20 @@
         "pid": "63960",
         "name": "fail2ban-server",
         "cpu": "0.2"
-      },
-      {
-        "pid": "544003",
-        "name": "kworker/2:3-eve",
-        "cpu": "0.0"
       }
     ]
   },
   "ram": {
-    "used_mb": 687,
+    "used_mb": 688,
     "total_mb": 1967,
-    "usage_pct": 34.9
+    "usage_pct": 35.0
   },
   "disk": {
     "used_gb": 10,
     "total_gb": 15,
     "usage_pct": 70
   },
-  "uptime": "2 weeks, 5 hours, 11 minutes",
+  "uptime": "2 weeks, 5 hours, 16 minutes",
   "loadavg": {
     "load_1": 0.0,
     "load_5": 0.0,
@@ -48,10 +48,10 @@
   },
   "network": {
     "iface": "eth0",
-    "rx_bytes": 4966502110,
-    "tx_bytes": 2697591168,
-    "rx_speed": 882,
-    "tx_speed": 186
+    "rx_bytes": 4966719021,
+    "tx_bytes": 2697648304,
+    "rx_speed": 724,
+    "tx_speed": 191
   },
   "temperature": {
     "available": false,
@@ -90,10 +90,10 @@
       "status": "active"
     },
     "fail2ban": {
-      "total_banned": 372,
+      "total_banned": 373,
       "jails": {
         "recidive": 0,
-        "sshd": 372
+        "sshd": 373
       },
       "installed": true
     },
@@ -469,13 +469,14 @@
       "58.226.255.240",
       "179.189.85.66",
       "223.99.212.58",
-      "117.252.93.114"
+      "117.252.93.114",
+      "14.49.131.77"
     ],
     "login_attempts_24h": {
       "total": 0,
       "top_ips": []
     },
-    "ssh_attacks_24h": 109,
+    "ssh_attacks_24h": 110,
     "open_ports": [
       {
         "port": "2222",
@@ -491,11 +492,6 @@
     "pending_security_updates": 0
   },
   "history": [
-    {
-      "ts": "2026-08-04T13:20:01Z",
-      "cpu": 2.2,
-      "ram": 34.7
-    },
     {
       "ts": "2026-08-04T13:25:01Z",
       "cpu": 2.3,
@@ -590,6 +586,11 @@
       "ts": "2026-08-04T14:55:01Z",
       "cpu": 2.3,
       "ram": 34.9
+    },
+    {
+      "ts": "2026-08-04T15:00:01Z",
+      "cpu": 2.2,
+      "ram": 35.0
     }
   ]
 }
