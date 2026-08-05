@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-05T06:20:01Z",
+  "timestamp": "2026-08-05T06:25:01Z",
   "cpu": {
-    "usage": 0.0,
+    "usage": 2.3,
     "top_processes": [
       {
-        "pid": "574155",
+        "pid": "574316",
         "name": "python3",
-        "cpu": "14.2"
+        "cpu": "11.1"
       },
       {
         "pid": "511106",
@@ -31,16 +31,16 @@
     ]
   },
   "ram": {
-    "used_mb": 767,
+    "used_mb": 756,
     "total_mb": 1967,
-    "usage_pct": 39.0
+    "usage_pct": 38.4
   },
   "disk": {
     "used_gb": 10,
     "total_gb": 15,
     "usage_pct": 71
   },
-  "uptime": "2 weeks, 20 hours, 36 minutes",
+  "uptime": "2 weeks, 20 hours, 41 minutes",
   "loadavg": {
     "load_1": 0.0,
     "load_5": 0.0,
@@ -48,10 +48,10 @@
   },
   "network": {
     "iface": "eth0",
-    "rx_bytes": 5040284861,
-    "tx_bytes": 2760603402,
-    "rx_speed": 454,
-    "tx_speed": 175
+    "rx_bytes": 5040423812,
+    "tx_bytes": 2760659240,
+    "rx_speed": 464,
+    "tx_speed": 186
   },
   "temperature": {
     "available": false,
@@ -90,16 +90,14 @@
       "status": "active"
     },
     "fail2ban": {
-      "total_banned": 396,
+      "total_banned": 394,
       "jails": {
         "recidive": 0,
-        "sshd": 396
+        "sshd": 394
       },
       "installed": true
     },
     "banned_ips": [
-      "103.174.80.40",
-      "117.216.33.31",
       "103.112.224.81",
       "176.10.197.168",
       "223.107.72.234",
@@ -516,11 +514,6 @@
   },
   "history": [
     {
-      "ts": "2026-08-05T04:45:01Z",
-      "cpu": 2.3,
-      "ram": 34.8
-    },
-    {
       "ts": "2026-08-05T04:50:01Z",
       "cpu": 2.2,
       "ram": 34.8
@@ -614,6 +607,11 @@
       "ts": "2026-08-05T06:20:01Z",
       "cpu": 0.0,
       "ram": 39.0
+    },
+    {
+      "ts": "2026-08-05T06:25:01Z",
+      "cpu": 2.3,
+      "ram": 38.4
     }
   ]
 }
