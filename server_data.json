@@ -1,17 +1,12 @@
 {
-  "timestamp": "2026-08-05T01:05:01Z",
+  "timestamp": "2026-08-05T01:10:02Z",
   "cpu": {
     "usage": 0.0,
     "top_processes": [
       {
-        "pid": "563956",
-        "name": "ps",
-        "cpu": "100"
-      },
-      {
-        "pid": "563949",
+        "pid": "564099",
         "name": "python3",
-        "cpu": "14.2"
+        "cpu": "16.6"
       },
       {
         "pid": "511106",
@@ -24,23 +19,28 @@
         "cpu": "0.2"
       },
       {
+        "pid": "16227",
+        "name": "systemd-journal",
+        "cpu": "0.0"
+      },
+      {
         "pid": "562870",
-        "name": "kworker/2:2-mm_",
+        "name": "kworker/2:2-eve",
         "cpu": "0.0"
       }
     ]
   },
   "ram": {
-    "used_mb": 698,
+    "used_mb": 682,
     "total_mb": 1967,
-    "usage_pct": 35.5
+    "usage_pct": 34.7
   },
   "disk": {
     "used_gb": 10,
     "total_gb": 15,
     "usage_pct": 71
   },
-  "uptime": "2 weeks, 15 hours, 21 minutes",
+  "uptime": "2 weeks, 15 hours, 26 minutes",
   "loadavg": {
     "load_1": 0.0,
     "load_5": 0.0,
@@ -48,10 +48,10 @@
   },
   "network": {
     "iface": "eth0",
-    "rx_bytes": 4992130982,
-    "tx_bytes": 2707359317,
-    "rx_speed": 469,
-    "tx_speed": 187
+    "rx_bytes": 4992267647,
+    "tx_bytes": 2707414654,
+    "rx_speed": 455,
+    "tx_speed": 184
   },
   "temperature": {
     "available": false,
@@ -90,10 +90,10 @@
       "status": "active"
     },
     "fail2ban": {
-      "total_banned": 390,
+      "total_banned": 391,
       "jails": {
         "recidive": 0,
-        "sshd": 390
+        "sshd": 391
       },
       "installed": true
     },
@@ -487,13 +487,14 @@
       "211.223.41.90",
       "203.198.173.145",
       "218.4.156.254",
-      "211.169.212.206"
+      "211.169.212.206",
+      "111.70.11.38"
     ],
     "login_attempts_24h": {
       "total": 0,
       "top_ips": []
     },
-    "ssh_attacks_24h": 99,
+    "ssh_attacks_24h": 101,
     "open_ports": [
       {
         "port": "2222",
@@ -509,11 +510,6 @@
     "pending_security_updates": 0
   },
   "history": [
-    {
-      "ts": "2026-08-04T23:30:02Z",
-      "cpu": 2.2,
-      "ram": 35.6
-    },
     {
       "ts": "2026-08-04T23:35:01Z",
       "cpu": 2.3,
@@ -608,6 +604,11 @@
       "ts": "2026-08-05T01:05:01Z",
       "cpu": 0.0,
       "ram": 35.5
+    },
+    {
+      "ts": "2026-08-05T01:10:02Z",
+      "cpu": 0.0,
+      "ram": 34.7
     }
   ]
 }
