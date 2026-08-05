@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-05T00:30:01Z",
+  "timestamp": "2026-08-05T00:35:01Z",
   "cpu": {
     "usage": 0.0,
     "top_processes": [
       {
-        "pid": "562867",
+        "pid": "563022",
         "name": "python3",
-        "cpu": "25.0"
+        "cpu": "14.8"
       },
       {
         "pid": "511106",
@@ -31,7 +31,7 @@
     ]
   },
   "ram": {
-    "used_mb": 695,
+    "used_mb": 694,
     "total_mb": 1967,
     "usage_pct": 35.3
   },
@@ -40,7 +40,7 @@
     "total_gb": 15,
     "usage_pct": 71
   },
-  "uptime": "2 weeks, 14 hours, 46 minutes",
+  "uptime": "2 weeks, 14 hours, 51 minutes",
   "loadavg": {
     "load_1": 0.0,
     "load_5": 0.0,
@@ -48,10 +48,10 @@
   },
   "network": {
     "iface": "eth0",
-    "rx_bytes": 4991111976,
-    "tx_bytes": 2706973491,
-    "rx_speed": 454,
-    "tx_speed": 177
+    "rx_bytes": 4991261015,
+    "tx_bytes": 2707033275,
+    "rx_speed": 498,
+    "tx_speed": 200
   },
   "temperature": {
     "available": false,
@@ -90,10 +90,10 @@
       "status": "active"
     },
     "fail2ban": {
-      "total_banned": 389,
+      "total_banned": 390,
       "jails": {
         "recidive": 0,
-        "sshd": 389
+        "sshd": 390
       },
       "installed": true
     },
@@ -486,13 +486,14 @@
       "1.247.245.61",
       "211.223.41.90",
       "203.198.173.145",
-      "218.4.156.254"
+      "218.4.156.254",
+      "211.169.212.206"
     ],
     "login_attempts_24h": {
       "total": 0,
       "top_ips": []
     },
-    "ssh_attacks_24h": 104,
+    "ssh_attacks_24h": 105,
     "open_ports": [
       {
         "port": "2222",
@@ -508,11 +509,6 @@
     "pending_security_updates": 0
   },
   "history": [
-    {
-      "ts": "2026-08-04T22:55:01Z",
-      "cpu": 2.3,
-      "ram": 35.3
-    },
     {
       "ts": "2026-08-04T23:00:01Z",
       "cpu": 0.0,
@@ -605,6 +601,11 @@
     },
     {
       "ts": "2026-08-05T00:30:01Z",
+      "cpu": 0.0,
+      "ram": 35.3
+    },
+    {
+      "ts": "2026-08-05T00:35:01Z",
       "cpu": 0.0,
       "ram": 35.3
     }
